@@ -1,0 +1,408 @@
+/* ============================================
+   Convite Casamento - Mateus & Mariana
+   Paleta: Verde oliva + Dourado + Branco
+   ============================================ */
+
+:root {
+  /* Paleta de cores */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #EBEFE3;
+  --color-text-light: #B2BDA0;
+  --color-accent: #8D9E6F;
+  --color-text: #526534;
+  --color-text-dark: #2F3B1C;
+  --color-gold: #C9A227;
+
+  /* Tipografia */
+  --font-script: 'Great Vibes', cursive;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+  /* Espaçamentos */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+
+  /* Transições */
+  --transition: 0.2s ease;
+}
+
+/* Reset e base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image: url('../assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: 1.4;
+}
+
+/* Layout principal */
+.invitation {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right)) max(0.5rem, env(safe-area-inset-bottom)) max(0.5rem, env(safe-area-inset-left));
+  overflow: hidden;
+}
+
+/* Conteúdo central */
+.invitation__content {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  flex-shrink: 1;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Monograma */
+.monogram {
+  margin: 0 0 0.25rem;
+}
+
+.monogram__ring {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(70px, 12vw, 120px);
+  height: clamp(70px, 12vw, 120px);
+  border: 2px solid var(--color-gold);
+  border-radius: 50%;
+  margin-bottom: .5em;
+}
+
+.monogram__initials {
+  font-family: var(--font-script);
+  font-size: clamp(.8rem, 3vw, 1.4rem);
+  font-weight: 400;
+  color: var(--color-text-dark);
+}
+
+/* Citação */
+.quote {
+  margin: 0 0 0.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.quote cite {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+  font-style: normal;
+  color: var(--color-text-light);
+}
+
+/* Nomes dos noivos */
+.names {
+  margin: .5em 0;
+  font-family: var(--font-script);
+  font-size: clamp(2.5rem, 6vw, 2.5rem);
+  font-weight: 400;
+  color: var(--color-text-dark);
+  letter-spacing: 0.02em;
+}
+
+/* Chamada */
+.call {
+  margin:  0 0 1em 0;
+  font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+}
+
+/* Data e hora */
+.datetime {
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-text-light);
+}
+
+.datetime time {
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+/* Local */
+.venue {
+  margin-bottom: 0.35rem;
+}
+
+.venue__title {
+  margin: 0 0 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+}
+
+.venue__name {
+  margin: 0 0 0.05rem;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.venue__address {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--color-text);
+}
+
+/* Ações interativas */
+.actions {
+  padding: .5em 0;
+}
+
+.actions__hint {
+  margin: 0 0 0.5rem;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+}
+
+.actions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+/* Botões de ação */
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 64px;
+  min-height: 56px;
+  padding: 0.5rem 0.35rem;
+  text-decoration: none;
+  color: var(--color-text-dark);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  transition: all var(--transition);
+}
+
+.action:hover:not(.action--disabled) {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 59, 28, 0.15);
+}
+
+.action:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.action--disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.action__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+
+.action__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.action__label {
+  font-size: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+/* RSVP */
+.rsvp {
+  margin: 2em 0 0 0;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.rsvp__date {
+  font-weight: 900;
+  color: var(--color-text-dark);
+}
+
+/* ============================================
+   Responsividade - mantém tudo em uma tela
+   ============================================ */
+
+@media (max-width: 480px) {
+  .invitation {
+    padding: 0.35rem;
+  }
+
+  .invitation__content {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .actions__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+
+  .action {
+    max-width: 56px;
+    min-height: 48px;
+    padding: 0.35rem 0.2rem;
+  }
+
+  .action__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .action__icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .action__label {
+    font-size: 0.45rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .invitation__content {
+    max-width: 80%;
+    padding: 1.5rem 2rem;
+  }
+
+  .monogram__ring {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0.75em;
+  }
+
+  .monogram__initials {
+    font-size: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .quote cite {
+    font-size: 0.9rem;
+  }
+
+  .names {
+    font-size: 5rem;
+    margin: 0.2em;
+  }
+
+  .call {
+    font-size: 1rem;
+  }
+
+  .datetime time {
+    font-size: 1.25rem;
+  }
+
+  .venue__title {
+    font-size: 0.85rem;
+  }
+
+  .venue__name {
+    font-size: 1.15rem;
+  }
+
+  .venue__address {
+    font-size: 1rem;
+  }
+
+  .actions__hint {
+    font-size: 0.75rem;
+  }
+
+  .action {
+    max-width: 150px;
+    min-height: 72px;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .action__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .action__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .action__label {
+    font-size: 0.7rem;
+  }
+
+  .rsvp {
+    font-size: 1rem;
+  }
+}
