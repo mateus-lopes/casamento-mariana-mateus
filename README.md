@@ -5,7 +5,24 @@ Convite interativo em HTML para o casamento de Mateus e Mariana (05/09/2026).
 ## Como usar
 
 1. Abra o arquivo `index.html` no navegador.
-2. Para publicar online: faça upload dos arquivos em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel, etc.).
+2. Para publicar online no GitHub Pages, veja a seção Deploy abaixo.
+
+## Deploy no GitHub Pages
+
+O repositório já está inicializado. Para publicar:
+
+1. **Crie o repositório no GitHub:** [github.com/new](https://github.com/new) — nome: `casamento`, deixe vazio (sem README)
+2. **Se seu usuário for diferente de `mateus-lopes`**, atualize o remote:
+   ```bash
+   git remote set-url origin https://github.com/SEU-USUARIO/casamento.git
+   ```
+3. **Envie o código:**
+   ```bash
+   git push -u origin main
+   ```
+4. **Ative o Pages:** Settings > Pages > Source: Deploy from branch > Branch: main, pasta: / (root) > Save
+
+O site ficará em `https://SEU-USUARIO.github.io/casamento/`
 
 ## Personalização
 
