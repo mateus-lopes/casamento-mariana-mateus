@@ -1,10 +1,4 @@
-/* ============================================
-   Convite Casamento - Mateus & Mariana
-   Paleta: Verde oliva + Dourado + Branco
-   ============================================ */
-
 :root {
-  /* Paleta de cores */
   --color-bg: #FFFFFF;
   --color-bg-alt: #EBEFE3;
   --color-text-light: #B2BDA0;
@@ -13,11 +7,9 @@
   --color-text-dark: #2F3B1C;
   --color-gold: #C9A227;
 
-  /* Tipografia */
   --font-script: 'Great Vibes', cursive;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
 
-  /* Espaçamentos */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -25,11 +17,9 @@
   --space-xl: 3rem;
   --space-2xl: 4rem;
 
-  /* Transições */
   --transition: 0.2s ease;
 }
 
-/* Reset e base */
 *,
 *::before,
 *::after {
@@ -58,7 +48,6 @@ body {
   line-height: 1.4;
 }
 
-/* Layout principal */
 .invitation {
   position: relative;
   height: 100%;
@@ -71,7 +60,6 @@ body {
   overflow: hidden;
 }
 
-/* Conteúdo central */
 .invitation__content {
   position: relative;
   z-index: 1;
@@ -96,7 +84,6 @@ body {
   to { opacity: 1; }
 }
 
-/* Monograma */
 .monogram {
   margin: 0 0 0.25rem;
 }
@@ -119,7 +106,6 @@ body {
   color: var(--color-text-dark);
 }
 
-/* Citação */
 .quote {
   margin: 0 0 0.25rem;
   padding: 0 0.25rem;
@@ -137,7 +123,6 @@ body {
   color: var(--color-text-light);
 }
 
-/* Nomes dos noivos */
 .names {
   margin: .5em 0;
   font-family: var(--font-script);
@@ -147,7 +132,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Chamada */
 .call {
   margin:  0 0 1em 0;
   font-size: clamp(0.65rem, 1.8vw, 0.8rem);
@@ -157,7 +141,6 @@ body {
   color: var(--color-text);
 }
 
-/* Data e hora */
 .datetime {
   margin-bottom: 0.25rem;
   padding-bottom: 0.35rem;
@@ -170,7 +153,6 @@ body {
   color: var(--color-text-dark);
 }
 
-/* Local */
 .venue {
   margin-bottom: 0.35rem;
 }
@@ -197,7 +179,6 @@ body {
   color: var(--color-text);
 }
 
-/* Ações interativas */
 .actions {
   padding: .5em 0;
 }
@@ -217,7 +198,6 @@ body {
   justify-items: center;
 }
 
-/* Botões de ação */
 .action {
   display: flex;
   flex-direction: column;
@@ -277,7 +257,6 @@ body {
   line-height: 1.6;
 }
 
-/* RSVP */
 .rsvp {
   margin: 2em 0 0 0;
   font-size: 0.8rem;
@@ -288,10 +267,6 @@ body {
   font-weight: 900;
   color: var(--color-text-dark);
 }
-
-/* ============================================
-   Responsividade - mantém tudo em uma tela
-   ============================================ */
 
 @media (max-width: 480px) {
   .invitation {
