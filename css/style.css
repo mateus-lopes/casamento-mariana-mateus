@@ -260,17 +260,14 @@ body {
 .rsvp {
   margin: 2.1em 0 0 0;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text-dark);
-  background: var(--color-bg-alt);
-  padding: 0.55rem 0.4rem;
-  border-radius: 8px;
-  opacity: 0.7;
-  border: 1px solid var(--color-accent);
+  color: var(--color-text);
 }
 
 .rsvp__date {
   font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: 0.15rem;
+  font-family: var(--font-script);
   color: var(--color-text-dark);
 }
 
