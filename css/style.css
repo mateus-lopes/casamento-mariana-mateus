@@ -260,7 +260,13 @@ body {
 .rsvp {
   margin: 2.1em 0 0 0;
   font-size: 0.85rem;
-  color: var(--color-text-light);
+  font-weight: 500;
+  color: var(--color-text-dark);
+  background: var(--color-bg-alt);
+  padding: 0.55rem 0.4rem;
+  border-radius: 8px;
+  opacity: 0.7;
+  border: 1px solid var(--color-accent);
 }
 
 .rsvp__date {
@@ -283,7 +289,7 @@ body {
   }
 
   .action {
-    max-width: 58px;
+    max-width: 70px;
     min-height: 50px;
     padding: 0.4rem 0.25rem;
   }
