@@ -325,87 +325,75 @@
 
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: #1a2412;
-      background-image: linear-gradient(rgba(26, 36, 18, 0.85), rgba(26, 36, 18, 0.85)),
-        url("../assets/images/bg.png");
-      @apply text-olive-200;
+      background-color: #ffffff !important;
+      background-image: url("../assets/images/bg.png") !important;
+      @apply text-olive-500;
     }
 
     .invitation-card {
-      @apply border border-gold/40 bg-olive-900/60;
+      border: none;
+      background: transparent;
     }
 
     .monogram__initials {
-      @apply text-olive-100;
+      @apply text-olive-700;
     }
 
     .quote {
-      @apply text-olive-200;
+      @apply text-olive-500;
     }
 
     .quote cite {
-      @apply text-olive-200;
+      @apply text-olive-500;
     }
 
     .names {
-      @apply text-olive-100;
+      @apply text-olive-700;
     }
 
     .call {
-      @apply text-olive-300;
+      @apply text-olive-500;
     }
 
     .datetime {
-      @apply border-olive-600 pb-1.5;
+      @apply border-b border-olive-200;
     }
 
     .datetime time {
-      @apply text-olive-100;
+      @apply text-olive-700;
     }
 
     .venue__name {
-      @apply text-olive-100;
-    }
-
-    .venue__address {
-      @apply text-olive-300;
+      @apply text-olive-700;
     }
 
     .actions__hint {
-      @apply text-olive-300;
+      @apply text-olive-500;
     }
 
     .action-btn {
-      @apply border-olive-600 bg-olive-700 text-olive-50;
+      @apply border-olive-300 bg-olive-50 text-olive-700;
     }
 
     .action-btn:hover:not(.action-btn--disabled) {
-      @apply bg-gold text-olive-900 shadow-md;
-    }
-
-    .action-btn--disabled {
-      @apply bg-olive-800 text-olive-400;
+      @apply bg-olive-400 text-white shadow-md;
     }
 
     .avoid-colors {
-      @apply border-t border-olive-600;
+      @apply border-t border-olive-200;
     }
 
     .avoid-colors__title {
-      @apply text-olive-300;
+      @apply text-olive-500;
     }
 
     .color-swatch__circle {
-      @apply border-olive-500;
-      box-shadow: 0 0 0 1px rgba(47, 59, 28, 0.4);
+      @apply border-olive-200;
+      box-shadow: 0 0 0 1px rgba(47, 59, 28, 0.08);
     }
 
     .color-swatch__hex {
-      @apply text-olive-400;
-    }
-
-    .invitation-footer__text {
-      @apply text-olive-200;
+      @apply text-olive-500;
     }
   }
 }
