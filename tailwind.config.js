@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.css"],
+  content: ["./index.html", "./css/input.css"],
   theme: {
     extend: {
       colors: {
@@ -43,8 +43,8 @@ module.exports = {
         "card-lg": "1.6rem",
       },
       maxWidth: {
-        card: "432px",
-        "card-lg": "80%",
+        card: "480px",
+        "card-lg": "90%",
       },
     },
   },

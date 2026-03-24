@@ -69,12 +69,12 @@
   }
 
   .monogram__ring {
-    @apply mb-invitation inline-flex h-[74px] w-[74px] items-center justify-center rounded-full border-2 border-gold;
+    @apply mb-invitation inline-flex h-[78px] w-[78px] items-center justify-center rounded-full border-2 border-gold;
   }
 
   @media (min-width: 1200px) {
     .monogram__ring {
-      @apply mb-invitation-lg h-[124px] w-[124px];
+      @apply mb-invitation-lg h-[124px] w-[124px] p-5;
     }
   }
 
@@ -89,22 +89,22 @@
   }
 
   .quote {
-    @apply mb-1 px-1 text-[0.875rem] italic leading-snug text-olive-500;
+    @apply mb-1 px-1 text-[0.95rem] italic leading-snug text-olive-500;
   }
 
   @media (min-width: 1200px) {
     .quote {
-      @apply text-[1.05rem] leading-normal;
+      @apply text-[1.15rem] leading-normal;
     }
   }
 
   .quote cite {
-    @apply mt-0.5 block text-[0.8125rem] not-italic text-olive-500;
+    @apply mt-0.5 block text-[0.875rem] not-italic text-olive-500;
   }
 
   @media (min-width: 1200px) {
     .quote cite {
-      @apply text-[0.95rem];
+      @apply text-[1rem];
     }
   }
 

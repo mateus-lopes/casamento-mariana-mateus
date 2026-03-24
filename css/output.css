@@ -617,7 +617,7 @@ body {
   max-height: 100%;
   min-height: 0px;
   width: 100%;
-  max-width: 432px;
+  max-width: 480px;
   flex-shrink: 1;
 }
 
@@ -649,7 +649,7 @@ body {
 
 @media (min-width: 1200px) {
   .invitation-card {
-    max-width: 80%;
+    max-width: 90%;
     padding: 1.6rem 2.1rem;
   }
 }
@@ -661,8 +661,8 @@ body {
 .monogram__ring {
   margin-bottom: 0.55em;
   display: inline-flex;
-  height: 74px;
-  width: 74px;
+  height: 78px;
+  width: 78px;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
@@ -676,6 +676,7 @@ body {
     margin-bottom: 0.8em;
     height: 124px;
     width: 124px;
+    padding: 1.25rem;
   }
 }
 
@@ -697,7 +698,7 @@ body {
   margin-bottom: 0.25rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-style: italic;
   line-height: 1.375;
   --tw-text-opacity: 1;
@@ -706,7 +707,7 @@ body {
 
 @media (min-width: 1200px) {
   .quote {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.5;
   }
 }
@@ -714,7 +715,7 @@ body {
 .quote cite {
   margin-top: 0.125rem;
   display: block;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-style: normal;
   --tw-text-opacity: 1;
   color: rgb(82 101 52 / var(--tw-text-opacity, 1));
@@ -722,7 +723,7 @@ body {
 
 @media (min-width: 1200px) {
   .quote cite {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 
@@ -1270,8 +1271,8 @@ body {
   height: 25px;
 }
 
-.h-\[74px\] {
-  height: 74px;
+.h-\[78px\] {
+  height: 78px;
 }
 
 .h-full {
@@ -1310,8 +1311,8 @@ body {
   width: 25px;
 }
 
-.w-\[74px\] {
-  width: 74px;
+.w-\[78px\] {
+  width: 78px;
 }
 
 .w-full {
@@ -1323,7 +1324,7 @@ body {
 }
 
 .max-w-card {
-  max-width: 432px;
+  max-width: 480px;
 }
 
 .flex-shrink {
@@ -1514,6 +1515,10 @@ body {
   font-size: 1.05rem;
 }
 
+.text-\[1\.15rem\] {
+  font-size: 1.15rem;
+}
+
 .text-\[1\.2rem\] {
   font-size: 1.2rem;
 }
@@ -1524,6 +1529,10 @@ body {
 
 .text-\[1\.55rem\] {
   font-size: 1.55rem;
+}
+
+.text-\[1rem\] {
+  font-size: 1rem;
 }
 
 .text-\[2\.6rem\] {
