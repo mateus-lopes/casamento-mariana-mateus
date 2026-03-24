@@ -21,11 +21,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/output.css">
 </head>
 <body>
-  <main class="invitation">
-    <article class="invitation__content">
+  <main class="safe-area-pad invitation-main">
+    <article class="invitation-card">
       <div class="monogram">
         <div class="monogram__ring">
           <span class="monogram__initials">M & M</span>
@@ -41,34 +41,52 @@
         <time datetime="2026-09-05T18:00">05. Setembro. 2026 às 18:00</time>
       </div>
       <section class="venue">
-        <h2 class="venue__title">Cerimônia e Recepção</h2>
-        <p class="venue__name">Sítio Aerostar</p>
-        <p class="venue__address">Joinville, SC</p>
-      </section>
+        <!-- <h2 class="venue__title">Cerimônia e Recepção</h2> -->
+        <p class="venue__name">Sítio Aerostar - Joinville</p>
+      </section>  
       <section class="actions">
         <p class="actions__hint">Clique nos ícones abaixo</p>
-        <div class="actions__grid">
-          <a href="https://wa.me/5547991176915?text=Olá!%20Confirmo%20minha%20presença%20no%20casamento%20de%20Mateus%20e%20Mariana%20em%2005/09/2026." class="action" target="_blank" rel="noopener noreferrer" title="Confirmar presença via WhatsApp">
-            <span class="action__icon" aria-hidden="true">
+        <div class="actions-grid">
+          <a href="https://wa.me/5547991176915?text=Olá!%20Confirmo%20minha%20presença%20no%20casamento%20de%20Mateus%20e%20Mariana%20em%2005/09/2026." class="action-btn" target="_blank" rel="noopener noreferrer" title="Confirmar presença via WhatsApp">
+            <span class="action-btn__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </span>
-            <span class="action__label">Confirmar presença</span>
+            <span class="action-btn__label">Confirmar presença</span>
           </a>
-          <a href="#" class="action action--disabled" data-action="lista-presentes" target="_blank" rel="noopener noreferrer" title="Lista de presentes (em breve)">
-            <span class="action__icon" aria-hidden="true">
+          <a href="#" class="action-btn action-btn--disabled" data-action="lista-presentes" target="_blank" rel="noopener noreferrer" title="Lista de presentes (em breve)">
+            <span class="action-btn__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/></svg>
             </span>
-            <span class="action__label">Lista de presentes</span>
+            <span class="action-btn__label">Lista de presentes</span>
           </a>
-          <a href="https://www.google.com/maps/search/S%C3%ADtio+Aerostar+Joinville" class="action" target="_blank" rel="noopener noreferrer" title="Ver localização no mapa">
-            <span class="action__icon" aria-hidden="true">
+          <a href="https://www.google.com/maps/search/S%C3%ADtio+Aerostar+Joinville" class="action-btn" target="_blank" rel="noopener noreferrer" title="Ver localização no mapa">
+            <span class="action-btn__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </span>
-            <span class="action__label">Localização</span>
+            <span class="action-btn__label">Localização</span>
           </a>
         </div>
       </section>
-      <p class="rsvp">Confirme sua presença até <b class="rsvp__date">12/05</b></p>
+      <section class="avoid-colors">
+        <h2 class="avoid-colors__title">Cores para evitar</h2>
+        <div class="avoid-colors__swatches">
+          <div class="color-swatch" style="--swatch-color: #FFFFFF" title="Branco #FFFFFF">
+            <span class="color-swatch__circle"></span>
+          </div>
+          <div class="color-swatch" style="--swatch-color: #9ac494" title="Verde Oliva #9ac494">
+            <span class="color-swatch__circle"></span>
+          </div>
+          <div class="color-swatch" style="--swatch-color: #e78a9d" title="Rose #ee9db0">
+            <span class="color-swatch__circle"></span>
+          </div>
+          <div class="color-swatch" style="--swatch-color: #B3CEE5" title="Serenity #B3CEE5">
+            <span class="color-swatch__circle"></span>
+          </div>
+          <div class="color-swatch" style="--swatch-color: #C0C0C0" title="Cinza #C0C0C0">
+            <span class="color-swatch__circle"></span>
+          </div>
+        </div>
+      </section>
     </article>
   </main>
   <script src="js/main.js"></script>

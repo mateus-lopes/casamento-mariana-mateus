@@ -4,8 +4,10 @@ Convite interativo em HTML para o casamento de Mateus e Mariana (05/09/2026).
 
 ## Como usar
 
-1. Abra o arquivo `index.html` no navegador.
-2. Para publicar online no GitHub Pages, veja a seção Deploy abaixo.
+1. **Instale as dependências:** `npm install`
+2. **Gere o CSS:** `npm run build:css`
+3. Abra o arquivo `index.html` no navegador.
+4. Para publicar online no GitHub Pages, veja a seção Deploy abaixo.
 
 ## Deploy no GitHub Pages
 
@@ -16,10 +18,13 @@ O repositório já está inicializado. Para publicar:
    ```bash
    git remote set-url origin https://github.com/SEU-USUARIO/casamento.git
    ```
-3. **Envie o código:**
+3. **Gere o CSS e envie o código:**
    ```bash
+   npm run build:css
+   git add .
    git push -u origin main
    ```
+   (Execute `npm run build:css` antes de cada deploy para incluir as alterações de estilo.)
 4. **Ative o Pages:** Settings > Pages > Source: Deploy from branch > Branch: main, pasta: / (root) > Save
 
 O site ficará em `https://SEU-USUARIO.github.io/casamento/`
@@ -41,10 +46,13 @@ O horário está definido como 18h no HTML. Para alterar, edite o elemento `<tim
 
 ```
 casamento/
-├── index.html      # Página principal
-├── css/style.css   # Estilos
-├── js/main.js      # Configuração e interatividade
-├── assets/         # Imagens (foto do casal, etc.)
+├── index.html           # Página principal
+├── package.json         # Dependências (Tailwind)
+├── tailwind.config.js   # Tema (cores, fontes, breakpoints)
+├── src/input.css        # CSS fonte (Tailwind + custom)
+├── css/output.css       # CSS gerado (build)
+├── js/main.js           # Configuração e interatividade
+├── assets/              # Imagens
 └── README.md
 ```
 

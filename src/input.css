@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  html {
+    @apply h-full overflow-hidden;
+    font-size: 16px;
+  }
+
+  body {
+    @apply m-0 h-screen overflow-hidden font-serif font-normal leading-snug text-olive-500;
+    height: 100dvh;
+    background-color: #ffffff;
+    background-image: url("../assets/images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@layer components {
+  .safe-area-pad {
+    padding: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right))
+      max(0.5rem, env(safe-area-inset-bottom)) max(0.5rem, env(safe-area-inset-left));
+  }
+
+  @media (max-width: 480px) {
+    .safe-area-pad {
+      padding: max(0.4rem, env(safe-area-inset-top)) max(0.4rem, env(safe-area-inset-right))
+        max(0.4rem, env(safe-area-inset-bottom)) max(0.4rem, env(safe-area-inset-left));
+    }
+  }
+
+  .invitation-main {
+    @apply relative flex min-h-0 h-full flex-col items-center justify-center overflow-hidden;
+  }
+
+  .invitation-card {
+    @apply animate-fadeIn relative z-10 flex max-h-full min-h-0 w-full max-w-card flex-shrink flex-col items-center justify-center rounded-xl text-center;
+    padding: 0.85rem 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    .invitation-card {
+      padding: 0.55rem 0.8rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .invitation-card {
+      @apply max-w-card-lg;
+      padding: 1.6rem 2.1rem;
+    }
+  }
+
+  .monogram {
+    @apply mb-1;
+  }
+
+  .monogram__ring {
+    @apply mb-invitation inline-flex h-[74px] w-[74px] items-center justify-center rounded-full border-2 border-gold;
+  }
+
+  @media (min-width: 1200px) {
+    .monogram__ring {
+      @apply mb-invitation-lg h-[124px] w-[124px];
+    }
+  }
+
+  .monogram__initials {
+    @apply font-script text-[0.85rem] font-normal text-olive-700;
+  }
+
+  @media (min-width: 1200px) {
+    .monogram__initials {
+      @apply text-[1.55rem];
+    }
+  }
+
+  .quote {
+    @apply mb-1 px-1 text-[0.875rem] italic leading-snug text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .quote {
+      @apply text-[1.05rem] leading-normal;
+    }
+  }
+
+  .quote cite {
+    @apply mt-0.5 block text-[0.8125rem] not-italic text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .quote cite {
+      @apply text-[0.95rem];
+    }
+  }
+
+  .names {
+    @apply font-script my-invitation text-[2.6rem] font-normal tracking-wide text-olive-700;
+  }
+
+  @media (min-width: 1200px) {
+    .names {
+      @apply my-[0.25em] text-[4rem];
+    }
+  }
+
+  .call {
+    @apply mb-[1.05em] text-[0.875rem] font-medium uppercase tracking-[0.1em] text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .call {
+      @apply text-[1.05rem];
+    }
+  }
+
+  .datetime {
+    @apply mb-1.5 border-b border-olive-200 pb-1.5;
+  }
+
+  .datetime time {
+    @apply text-[0.9rem] font-semibold text-olive-700;
+  }
+
+  @media (min-width: 1200px) {
+    .datetime time {
+      @apply text-[1.3rem];
+    }
+  }
+
+  .venue {
+    @apply mb-2;
+  }
+
+  .venue__title {
+    @apply mb-0.5 text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .venue__title {
+      @apply text-[0.9rem];
+    }
+  }
+
+  .venue__name {
+    @apply mb-0.5 text-[0.875rem] font-semibold text-olive-700;
+  }
+
+  @media (min-width: 1200px) {
+    .venue__name {
+      @apply text-[1.2rem];
+    }
+  }
+
+  .venue__address {
+    @apply text-[0.875rem] text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .venue__address {
+      @apply text-[1.05rem];
+    }
+  }
+
+  .actions {
+    @apply py-invitation;
+  }
+
+  .actions__hint {
+    @apply mb-2 text-[0.8125rem] uppercase tracking-[0.08em] text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .actions__hint {
+      @apply text-[0.8rem];
+    }
+  }
+
+  .actions-grid {
+    @apply grid grid-cols-3 justify-items-center gap-2;
+  }
+
+  @media (max-width: 480px) {
+    .actions-grid {
+      @apply gap-1.5;
+    }
+  }
+
+  .action-btn {
+    @apply flex min-w-0 w-full flex-col items-center gap-1 rounded-lg border border-olive-300 bg-olive-50 py-2 px-4 text-olive-700 no-underline transition-all;
+    min-height: 3.625rem;
+    max-width: 5.75rem;
+  }
+
+  .action-btn:hover:not(.action-btn--disabled) {
+    @apply -translate-y-0.5 bg-olive-400 text-white shadow-md;
+  }
+
+  .action-btn:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-gold;
+  }
+
+  .action-btn--disabled {
+    @apply opacity-70 cursor-not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    .action-btn {
+      max-width: 5.5rem;
+      min-height: 3.125rem;
+      @apply py-1.5 px-3;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .action-btn {
+      max-width: 9.625rem;
+      min-height: 4.625rem;
+      padding: 0.8rem 1rem;
+    }
+  }
+
+  .action-btn__icon {
+    @apply flex h-7 w-7 items-center justify-center;
+  }
+
+  .action-btn__icon svg {
+    @apply h-[19px] w-[19px];
+  }
+
+  @media (max-width: 480px) {
+    .action-btn__icon {
+      @apply h-6 w-6;
+    }
+    .action-btn__icon svg {
+      @apply h-[15px] w-[15px];
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .action-btn__icon {
+      @apply h-9 w-9;
+    }
+    .action-btn__icon svg {
+      @apply h-[25px] w-[25px];
+    }
+  }
+
+  .action-btn__label {
+    @apply text-center text-[0.7rem] font-medium uppercase leading-relaxed tracking-wide;
+  }
+
+  @media (max-width: 480px) {
+    .action-btn__label {
+      @apply text-[0.65rem];
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .action-btn__label {
+      @apply text-sm;
+    }
+  }
+
+  .avoid-colors {
+    @apply mt-6 pt-5 border-t border-olive-200;
+  }
+
+  .avoid-colors__title {
+    @apply mb-4 text-[0.8125rem] font-semibold uppercase tracking-[0.1em] text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .avoid-colors__title {
+      @apply text-[0.9rem];
+    }
+  }
+
+  .avoid-colors__swatches {
+    @apply flex flex-wrap justify-center gap-x-3 gap-y-4;
+  }
+
+  .color-swatch {
+    @apply flex flex-col items-center gap-1.5;
+  }
+
+  .color-swatch__circle {
+    @apply block rounded-full border border-olive-200;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--swatch-color);
+    box-shadow: 0 0 0 1px rgba(47, 59, 28, 0.08);
+  }
+
+  @media (min-width: 1200px) {
+    .color-swatch__circle {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .color-swatch__hex {
+    @apply text-[0.65rem] font-medium tracking-wide text-olive-500;
+  }
+
+  @media (min-width: 1200px) {
+    .color-swatch__hex {
+      @apply text-[0.75rem];
+    }
+  }
+}
