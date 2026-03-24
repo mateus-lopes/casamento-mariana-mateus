@@ -9,6 +9,10 @@
     @apply box-border;
   }
 
+  :root {
+    color-scheme: light only;
+  }
+
   html {
     @apply h-full overflow-hidden;
     font-size: 16px;
