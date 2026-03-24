@@ -10,7 +10,7 @@
   }
 
   :root {
-    color-scheme: light only;
+    color-scheme: light dark;
   }
 
   html {
@@ -320,6 +320,92 @@
   @media (min-width: 1200px) {
     .color-swatch__hex {
       @apply text-[0.75rem];
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1a2412;
+      background-image: linear-gradient(rgba(26, 36, 18, 0.85), rgba(26, 36, 18, 0.85)),
+        url("../assets/images/bg.png");
+      @apply text-olive-200;
+    }
+
+    .invitation-card {
+      @apply border border-gold/40 bg-olive-900/60;
+    }
+
+    .monogram__initials {
+      @apply text-olive-100;
+    }
+
+    .quote {
+      @apply text-olive-200;
+    }
+
+    .quote cite {
+      @apply text-olive-200;
+    }
+
+    .names {
+      @apply text-olive-100;
+    }
+
+    .call {
+      @apply text-olive-300;
+    }
+
+    .datetime {
+      @apply border-olive-600 pb-1.5;
+    }
+
+    .datetime time {
+      @apply text-olive-100;
+    }
+
+    .venue__name {
+      @apply text-olive-100;
+    }
+
+    .venue__address {
+      @apply text-olive-300;
+    }
+
+    .actions__hint {
+      @apply text-olive-300;
+    }
+
+    .action-btn {
+      @apply border-olive-600 bg-olive-700 text-olive-50;
+    }
+
+    .action-btn:hover:not(.action-btn--disabled) {
+      @apply bg-gold text-olive-900 shadow-md;
+    }
+
+    .action-btn--disabled {
+      @apply bg-olive-800 text-olive-400;
+    }
+
+    .avoid-colors {
+      @apply border-t border-olive-600;
+    }
+
+    .avoid-colors__title {
+      @apply text-olive-300;
+    }
+
+    .color-swatch__circle {
+      @apply border-olive-500;
+      box-shadow: 0 0 0 1px rgba(47, 59, 28, 0.4);
+    }
+
+    .color-swatch__hex {
+      @apply text-olive-400;
+    }
+
+    .invitation-footer__text {
+      @apply text-olive-200;
     }
   }
 }
