@@ -1,5 +1,5 @@
 const CONFIG = {
-  listaPresentesUrl: 'https://lista.havan.com.br/Convidado/ItensListaPresente/922173',
+  listaPresentesUrl: 'https://lista.havan.com.br/Convidado/ItensListaPresente/920339',
   enderecoMaps: 'Sítio Aerostar Joinville SC',
 };
 
